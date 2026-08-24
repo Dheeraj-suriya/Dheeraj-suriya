@@ -544,43 +544,35 @@ Databases
 ---
 
 # 🤝 Let's Connect
----
-
-# 📊 GitHub Activity
 
 <div align="center">
 
-### 🐍 Contribution Journey
+I'm always open to connecting with developers, students, builders, and people interested in technology.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./output/github-contribution-grid-snake.svg">
-  <img alt="GitHub Contribution Snake" src="./output/github-contribution-grid-snake.svg">
-</picture>
+<br>
 
-<br><br>
+<a href="https://github.com/Dheeraj-suriya">
+  <img src="https://img.shields.io/badge/GitHub-Dheeraj--suriya-181717?style=for-the-badge&logo=github" alt="GitHub">
+</a>
 
-### 🚀 Building Consistently
-
-| 📌 Focus | 🔥 Current Direction |
-|---|---|
-| 🤖 Artificial Intelligence | AI-powered applications |
-| 📊 Data Analytics | Real-world data insights |
-| 🧠 NLP | Chatbots & language processing |
-| 🐍 Python | AI, analytics & software development |
-| ☕ Java | Object-oriented application development |
-| 🗄️ Databases | MongoDB & SQL |
-| 🌐 Development | Full-stack application development |
+<a href="mailto:YOUR_EMAIL@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
 
 </div>
 
 ---
 
-### 💡 Development Philosophy
+# ⭐ Thanks for Visiting!
 
-> **Learn → Build → Experiment → Improve → Share**
+<div align="center">
 
-I believe consistent hands-on projects are one of the best ways to turn
-technical knowledge into practical skills.
+### 🚀 Learn. Build. Improve. Repeat.
 
----
+If you find any of my projects useful or interesting, feel free to explore the repositories and leave a ⭐.
+
+<br>
+
+**Thanks for stopping by! 👋**
+
+</div>
