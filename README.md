@@ -544,6 +544,8 @@ Databases
 ---
 # 📊 GitHub Activity
 
+![GitHub Activity](./output/github-activity.svg)
+
 <div align="center">
 
 ### 📈 My GitHub Overview
