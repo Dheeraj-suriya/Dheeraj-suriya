@@ -13,7 +13,10 @@ jobs:
       contents: write
 
     steps:
-      - name: Generate Snake
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Contribution Snake
         uses: Platane/snk@v3
         with:
           github_user_name: Dheeraj-suriya
