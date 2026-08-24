@@ -555,7 +555,7 @@ I'm always open to connecting with developers, students, builders, and people in
   <img src="https://img.shields.io/badge/GitHub-Dheeraj--suriya-181717?style=for-the-badge&logo=github" alt="GitHub">
 </a>
 
-<a href="mailto:YOUR_EMAIL@gmail.com">
+<a href="mailto:dheerajsuriya5@gmail.com">
   <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
 </a>
 
