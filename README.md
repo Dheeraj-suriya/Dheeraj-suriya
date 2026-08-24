@@ -548,33 +548,31 @@ Databases
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Dheeraj-suriya&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Dheeraj Suriya GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api?username=Dheeraj-suriya&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true" width="48%" alt="GitHub Stats">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dheeraj-suriya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%" alt="Top Languages">
 
 <br><br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Dheeraj-suriya&theme=tokyonight&hide_border=true" alt="Dheeraj Suriya GitHub Streak" />
-
-<br><br>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dheeraj-suriya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Dheeraj-suriya&theme=tokyonight&hide_border=true" width="70%" alt="GitHub Streak">
 
 </div>
 
 ---
 
-## 📈 Development Snapshot
+## 🧠 Developer Focus
 
 <div align="center">
 
-| 🧠 Focus | 🚀 Building |
+| Area | Focus |
 |---|---|
-| 🤖 Artificial Intelligence | AI-powered applications |
+| 🤖 AI & Machine Learning | Intelligent applications |
+| 🧠 NLP | Chatbots & language processing |
 | 📊 Data Analytics | Data-driven insights |
-| 🧠 NLP | Conversational & language applications |
-| 🐍 Python | Application & analytics development |
-| ☕ Java | Object-oriented application development |
-| 🗄️ Databases | MongoDB & SQL solutions |
-| 🌐 Web Development | Full-stack development |
+| 🐍 Python | AI, analytics & applications |
+| ☕ Java | Object-oriented development |
+| 🗄️ Databases | MongoDB & SQL |
+| 🌐 Web Development | Full-stack applications |
 
 </div>
 
@@ -582,7 +580,7 @@ Databases
 
 <div align="center">
 
-### 💻 Code. Learn. Build. Repeat.
+### 💻 Learn → Build → Experiment → Improve → Share
 
 </div>
 
