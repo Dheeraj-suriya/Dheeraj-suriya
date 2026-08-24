@@ -544,44 +544,43 @@ Databases
 ---
 
 # 🤝 Let's Connect
+---
+
 # 📊 GitHub Activity
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Dheeraj-suriya&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true" width="48%" alt="GitHub Stats">
+### 🐍 Contribution Journey
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dheeraj-suriya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="48%" alt="Top Languages">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./output/github-contribution-grid-snake.svg">
+  <img alt="GitHub Contribution Snake" src="./output/github-contribution-grid-snake.svg">
+</picture>
 
 <br><br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Dheeraj-suriya&theme=tokyonight&hide_border=true" width="70%" alt="GitHub Streak">
+### 🚀 Building Consistently
 
-</div>
-
----
-
-## 🧠 Developer Focus
-
-<div align="center">
-
-| Area | Focus |
+| 📌 Focus | 🔥 Current Direction |
 |---|---|
-| 🤖 AI & Machine Learning | Intelligent applications |
+| 🤖 Artificial Intelligence | AI-powered applications |
+| 📊 Data Analytics | Real-world data insights |
 | 🧠 NLP | Chatbots & language processing |
-| 📊 Data Analytics | Data-driven insights |
-| 🐍 Python | AI, analytics & applications |
-| ☕ Java | Object-oriented development |
+| 🐍 Python | AI, analytics & software development |
+| ☕ Java | Object-oriented application development |
 | 🗄️ Databases | MongoDB & SQL |
-| 🌐 Web Development | Full-stack applications |
+| 🌐 Development | Full-stack application development |
 
 </div>
 
 ---
 
-<div align="center">
+### 💡 Development Philosophy
 
-### 💻 Learn → Build → Experiment → Improve → Share
+> **Learn → Build → Experiment → Improve → Share**
 
-</div>
+I believe consistent hands-on projects are one of the best ways to turn
+technical knowledge into practical skills.
 
 ---
