@@ -544,3 +544,46 @@ Databases
 ---
 
 # 🤝 Let's Connect
+# 📊 GitHub Activity
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Dheeraj-suriya&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Dheeraj Suriya GitHub Stats" />
+
+<br><br>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Dheeraj-suriya&theme=tokyonight&hide_border=true" alt="Dheeraj Suriya GitHub Streak" />
+
+<br><br>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dheeraj-suriya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+
+</div>
+
+---
+
+## 📈 Development Snapshot
+
+<div align="center">
+
+| 🧠 Focus | 🚀 Building |
+|---|---|
+| 🤖 Artificial Intelligence | AI-powered applications |
+| 📊 Data Analytics | Data-driven insights |
+| 🧠 NLP | Conversational & language applications |
+| 🐍 Python | Application & analytics development |
+| ☕ Java | Object-oriented application development |
+| 🗄️ Databases | MongoDB & SQL solutions |
+| 🌐 Web Development | Full-stack development |
+
+</div>
+
+---
+
+<div align="center">
+
+### 💻 Code. Learn. Build. Repeat.
+
+</div>
+
+---
