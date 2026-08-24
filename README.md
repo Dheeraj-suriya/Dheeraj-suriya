@@ -521,3 +521,26 @@ Databases
 </div>
 
 ---
+---
+
+# 🐍 GitHub Contribution Snake
+
+<div align="center">
+
+### 🟢 My Contribution Journey
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./output/github-contribution-grid-snake.svg">
+  <img alt="GitHub Contribution Snake" src="./output/github-contribution-grid-snake.svg">
+</picture>
+
+<br>
+
+**Every contribution represents another step in the journey. 🚀**
+
+</div>
+
+---
+
+# 🤝 Let's Connect
