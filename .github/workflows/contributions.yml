@@ -1,0 +1,273 @@
+name: Contribution History Graph
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  contribution-graph:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate contribution graph
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          python3 <<'PY'
+          import os
+          import json
+          import subprocess
+          from datetime import datetime
+
+          username = "Dheeraj-suriya"
+
+          query = '''
+          query($login:String!) {
+            user(login:$login) {
+              contributionsCollection {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          }
+          '''
+
+          variables = json.dumps({"login": username})
+
+          result = subprocess.run(
+              [
+                  "gh", "api", "graphql",
+                  "-f", f"query={query}",
+                  "-f", f"variables={variables}"
+              ],
+              capture_output=True,
+              text=True,
+              check=True
+          )
+
+          data = json.loads(result.stdout)
+
+          calendar = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+
+          weeks = calendar["weeks"]
+          total = calendar["totalContributions"]
+
+          # Flatten contribution days
+          days = []
+          for week in weeks:
+              for day in week["contributionDays"]:
+                  days.append(day)
+
+          # Keep the most recent 365 days
+          days = days[-365:]
+
+          max_count = max(
+              [d["contributionCount"] for d in days] or [1]
+          )
+
+          def level(count):
+              if count == 0:
+                  return 0
+              ratio = count / max_count
+              if ratio <= 0.20:
+                  return 1
+              if ratio <= 0.40:
+                  return 2
+              if ratio <= 0.70:
+                  return 3
+              return 4
+
+          # SVG dimensions
+          cell = 13
+          gap = 4
+          width = 900
+          height = 250
+
+          svg = []
+
+          svg.append(
+              f'<svg xmlns="http://www.w3.org/2000/svg" '
+              f'viewBox="0 0 {width} {height}" '
+              f'role="img" aria-label="GitHub contribution history">'
+          )
+
+          svg.append("""
+          <defs>
+            <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#58a6ff"/>
+              <stop offset="50%" stop-color="#a371f7"/>
+              <stop offset="100%" stop-color="#3fb950"/>
+            </linearGradient>
+
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          """)
+
+          svg.append("""
+          <rect
+            x="0"
+            y="0"
+            width="900"
+            height="250"
+            rx="18"
+            fill="#0d1117"
+            stroke="#30363d"
+            stroke-width="1"
+          />
+          """)
+
+          svg.append("""
+          <text
+            x="32"
+            y="42"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="22"
+            font-weight="700"
+            fill="url(#titleGradient)"
+          >
+            Contribution History
+          </text>
+          """)
+
+          svg.append(f"""
+          <text
+            x="32"
+            y="69"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="13"
+            fill="#8b949e"
+          >
+            {total:,} contributions in the last year
+          </text>
+          """)
+
+          # Graph
+          start_x = 32
+          start_y = 95
+
+          colors = [
+              "#161b22",
+              "#0e4429",
+              "#006d32",
+              "#26a641",
+              "#39d353"
+          ]
+
+          # Arrange 365 days in columns of 7 days
+          for index, day in enumerate(days):
+              week = index // 7
+              weekday = index % 7
+
+              x = start_x + week * (cell + gap)
+              y = start_y + weekday * (cell + gap)
+
+              count = day["contributionCount"]
+              lvl = level(count)
+
+              date = day["date"]
+
+              svg.append(
+                  f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" '
+                  f'rx="3" fill="{colors[lvl]}">'
+                  f'<title>{date}: {count} contribution{"s" if count != 1 else ""}</title>'
+                  f'</rect>'
+              )
+
+          # Legend
+          legend_y = 215
+
+          svg.append("""
+          <text
+            x="32"
+            y="219"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="11"
+            fill="#8b949e"
+          >
+            Less
+          </text>
+          """)
+
+          for i in range(5):
+              x = 65 + i * 19
+
+              svg.append(
+                  f'<rect x="{x}" y="{legend_y - 10}" '
+                  f'width="13" height="13" rx="3" fill="{colors[i]}"/>'
+              )
+
+          svg.append("""
+          <text
+            x="170"
+            y="219"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="11"
+            fill="#8b949e"
+          >
+            More
+          </text>
+          """)
+
+          svg.append("""
+          <text
+            x="720"
+            y="219"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="11"
+            fill="#8b949e"
+          >
+            Updated automatically
+          </text>
+          """)
+
+          svg.append("</svg>")
+
+          os.makedirs("output", exist_ok=True)
+
+          with open(
+              "output/contribution-graph.svg",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              f.write("\n".join(svg))
+
+          print("Contribution graph generated successfully.")
+
+          PY
+
+      - name: Commit updated graph
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/contribution-graph.svg
+
+          if git diff --cached --quiet; then
+            echo "No graph changes to commit."
+          else
+            git commit -m "Update contribution history graph"
+            git push
+          fi
