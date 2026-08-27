@@ -561,21 +561,6 @@ Databases
 
 ![GitHub Activity](./output/github-activity.svg)
 
-<div align="center">
-
-### 📈 My GitHub Overview
-
-<a href="https://github.com/Dheeraj-suriya">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dheeraj-suriya&show_icons=true&hide_border=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub Stats">
-</a>
-
-<br><br>
-
-<a href="https://github.com/Dheeraj-suriya">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dheeraj-suriya&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Top Languages">
-</a>
-
-</div>
 ---
 
 ## 🚀 Development Snapshot
