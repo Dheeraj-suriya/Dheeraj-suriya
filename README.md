@@ -542,7 +542,22 @@ Databases
 </div>
 
 ---
-# 📊 GitHub Activity
+
+---
+
+## 📈 Contribution History
+
+<p align="center">
+  <img
+    src="./output/contribution-history.svg"
+    alt="GitHub Contribution History"
+    width="100%"
+  />
+</p>
+
+---
+
+## 📊 GitHub Activity
 
 ![GitHub Activity](./output/github-activity.svg)
 
@@ -561,7 +576,6 @@ Databases
 </a>
 
 </div>
-
 ---
 
 ## 🚀 Development Snapshot
